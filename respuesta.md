@@ -130,9 +130,51 @@ if (tipoDeSuscripcion == 'free') {
 } else if (tipoDeSuscripcion == 'ExpertPlus') {
     console.log("tu y alguien mas pueden tomar todos los cursos de platzi durante un año");
 }
+
+##############################################################################################
+// Bonus reduccion de condicionales
+function ConseguirTipoSuscripcion(suscripcion) {
+    if (suscripcion == 'Free') {
+    console.log("solo puedes tomar los cursos gratis");
+    return;
+} if (suscripcion == 'Basic') {
+    console.log("puedes tomar casi todos los cursos de platzi durante un mes");
+    return;
+} if (suscripcion == 'Expert') {
+    console.log("puedes tomar casi todos los cursos de platzi durante un año");
+    return;
+} if (suscripcion == 'ExpertPlus') {
+    console.log("tu y alguien mas pueden tomar todos los cursos de platzi durante un año");
+    return;
+}
+console.warn('Este tipo de suscripcion no existe')
+}
+ConseguirTipoSuscripcion('Free')
+
 ```
 ## 3️⃣ Replica el comportamiento de tu condicional anterior con if, else y else if, pero ahora solo con if (sin else ni else if).
 💡 Bonus: si ya eres una experta o experto en el lenguaje, te desafío a comentar cómo replicar este comportamiento con arrays y un solo condicional. 😏
+```js
+const tiposDeSuscripcion = {
+    free:"solo puedes tomar los cursos gratis",
+    basic:"puedes tomar casi todos los cursos de platzi durante un mes",
+    expert: "puedes tomar casi todos los cursos de platzi durante un año",
+    expertPlus: "tu y alguien mas pueden tomar todos los cursos de platzi durante un año"
+}
+tiposDeSuscripcion.basic
+tiposDeSuscripcion["free"]
+
+***
+function conseguirTipoSuscripcion(suscripcion) {
+    if (tiposDeSuscripcion[suscripcion]){
+        console.log(tiposDeSuscripcion[suscripcion])
+        return;
+    }
+    console.warn("Ese tipo de suscripcion no existe")
+}
+conseguirTipoSuscripcion("free")
+
+```
 
 
 # $ Ciclos $
@@ -256,3 +298,5 @@ imprimirElementoPorElementoObjeto(obj)
  (2) ['Pollo frito', 'vegetales']
  */
 ```
+
+## 4️⃣3 Crea una función que pueda recibir cualquier objeto como parámetro e imprima todos sus elementos uno por uno (no se vale imprimir el objeto completo).
